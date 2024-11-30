@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.bible-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+select {
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bible-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    min-height: 300px;
+}
+
+#verse-display {
+    line-height: 1.8;
+}
+
+.verse-number {
+    color: #666;
+    margin-right: 10px;
+    font-weight: bold;
+}
