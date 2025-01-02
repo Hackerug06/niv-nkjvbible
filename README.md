@@ -1,1 +1,1 @@
-# niv-nkjvbible
+# typescript
