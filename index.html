@@ -3,39 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Study App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>How to setuo typeScript in Visual Studio Code</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo-img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-button {
+            display: none;
+            background-color: #007acc;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit {
+            margin-bottom: 1rem;
+        }
+
+        .benefit h3 {
+            font-size: 1.5rem;
+            color: #007acc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        /* Floating Support Us Button */
+        .support-us {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007acc;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .support-us:hover {
+            background-color: #005f99;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .toggle-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #007acc;
+                padding: 10px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bible Study App</h1>
-            <div class="version-selector">
-                <select id="version-select">
-                    <option value="nkjv">New King James Version (NKJV)</option>
-                    <option value="niv">New International Version (NIV)</option>
-                </select>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" class="logo-img">
+              <span><b>HACKERUG06</b></span>
             </div>
-        </header>
+            <button class="toggle-button">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="bible-navigation">
-            <select id="testament-select">
-                <option value="old">Old Testament</option>
-                <option value="new">New Testament</option>
-            </select>
-            <select id="book-select">
-                <!-- Books will be dynamically populated -->
-            </select>
-            <select id="chapter-select">
-                <!-- Chapters will be dynamically populated -->
-            </select>
-        </div>
+    <!-- Homepage Hero Section -->
+    <h1>HOW TO SETUP TYPESCRIPT IN VISUAL STUDIO CODE</h1>
+  <p>
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It offers classes, modules, and interfaces to help you build robust components.</p>
+  <h2>Install the TypeScript compiler</h2>
+  <p>Visual Studio Code includes TypeScript language support but does not include the TypeScript compiler, <b>tsc</b>. You will need to install the TypeScript compiler either globally or in your workspace to transpile TypeScript source code to JavaScript (<b>tsc HelloWorld.ts</b>).</p>
+  <p>The easiest way to install TypeScript is through npm, the Node.js Package Manager. If you have npm installed, you can install TypeScript globally <b>(-g)</b> on your computer by:</p>
+  <p><b>npm install -g typescript</b></p>
+  <p>You can test your install by checking the version.</p>
+  <p><b>tsc --version</b></p>
+  <h2>Hello World</h2>
+  <p>Let's start with a simple Hello World Node.js example. Create a new folder <b>HelloWorld</b> and launch VS Code.</p>
+  <p><b>mkdir HelloWorld</p>
+  <p>cd HelloWorld</p>
+  <p>code .</b></p>
+<p>From the File Explorer, create a new file called <b>helloworld.ts</b>.</p>
+<img src="file explorer.png" alt="file explorer">
+<p>Now add the following TypeScript code. You'll notice the TypeScript keyword <b>let</b> and the <b>string</b> type declaration.</p>
+<p><b>let message: string = 'Hello World';</p>
+<p>console.log(message);</b></p>
+<p>To compile your TypeScript code, you can open the Integrated Terminal (<b>Ctrl+`</b>) and type <b>tsc helloworld.ts</b>. This will compile and create a new <b>helloworld.js</b> JavaScript file.</p>
+<img src="terminal.png" alt="terminal">
+<p>If you have Node.js installed, you can run <b>node helloworld.js</b>.</p>
+<img src="terminal.png" alt="terminal">
+<p>If you open <b>helloworld.js</b>, you'll see that it doesn't look very different from <b>helloworld.ts</b>. The type information has been removed and let is now var.</p>
+<p><b>var message = 'Hello World';</p>
+<p>console.log(message);</b></p>
+<h2>IntelliSense</h2>
+<p>In VS Code, you can see that you get language features such as syntax highlighting and bracket matching. When you were typing in the editor, you may have noticed IntelliSense, the smart code completions and suggestions provided by VS Code and the TypeScript language server. Below you can see the methods of <b>console</b></p>
+<img src="terminal.png" alt="console">
+<p>When you select a method, you then get parameter help and can always get hover information.</p>
+<img src="terminal.png" alt="console">
+<h2>tsconfig.json</h2>
+<p>So far in this tutorial, you have been relying on the TypeScript compiler's default behavior to compile your TypeScript source code. You can modify the TypeScript compiler options by adding a <b>tsconfig.json</b> file that defines the TypeScript project settings such as the compiler options and the files that should be included.</p>
+<p><b>Important:</b> To use <b>tsconfig.json</b> for the rest of this tutorial, invoke <b>tsc</b> without input files. The TypeScript compiler knows to look at your <b>tsconfig.json</b> for project settings and compiler options.</p>
+<p>Add a simple <b>tsconfig.json</b> that set the options to compile to ES5 and use <b>CommonJS</b> modules.</p>
+<p><b>{</p>
+<p>"compilerOptions": {</p>
+<p>"target": "ES5",</p>
+<p>"module": "CommonJS"</p>
+<p>}</p>
+<p>}</b></p>
 
-        <div id="bible-content" class="bible-content">
-            <div id="verse-display"></div>
+
+  <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Why Use TypeScript?</h2>
+        <div class="benefit">
+            <h3>Improved Code Quality</h3>
+            <p>TypeScript helps catch errors at compile time.</p>
         </div>
+        <div class="benefit">
+            <h3>Better Code Completion</h3>
+            <p>Enjoy advanced IntelliSense features in your editor.</p>
+        </div>
+        <div class="benefit">
+            <h3>Enhanced Debugging Experience</h3>
+            <p>Debugging is easier with typed code and rich editor support.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TypeScript Guide. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating Support Us Button -->
+    <div class="support-us" onclick="window.location.href='https://wa.me/256753979539?text=I%20want%20to%20support%20you%20with%20your%20ICT%20work.'">
+        Support Us
     </div>
 
-    <script src="bible.js"></script>
+    <script>
+        const toggleButton = document.querySelector('.toggle-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
