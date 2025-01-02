@@ -241,22 +241,22 @@ TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. 
   <p>cd HelloWorld</p>
   <p>code .</b></p>
 <p>From the File Explorer, create a new file called <b>helloworld.ts</b>.</p>
-<img src="exp.png" alt="file explorer">
+<img src="exp.png" alt="file explorer" style="width: 50%; max-width: 500px; height: auto;">
 <p>Now add the following TypeScript code. You'll notice the TypeScript keyword <b>let</b> and the <b>string</b> type declaration.</p>
 <p><b>let message: string = 'Hello World';</p>
 <p>console.log(message);</b></p>
 <p>To compile your TypeScript code, you can open the Integrated Terminal (<b>Ctrl+`</b>) and type <b>tsc helloworld.ts</b>. This will compile and create a new <b>helloworld.js</b> JavaScript file.</p>
-<img src="exp1.png" alt="terminal" max-width="50px">
+          <img src="exp1.png" alt="terminal" style="width: 50%; max-width: 500px; height: auto;">
 <p>If you have Node.js installed, you can run <b>node helloworld.js</b>.</p>
-<img src="exp2.png" alt="terminal">
+          <img src="exp2.png" alt="terminal" style="width: 50%; max-width: 500px; height: auto;">
 <p>If you open <b>helloworld.js</b>, you'll see that it doesn't look very different from <b>helloworld.ts</b>. The type information has been removed and let is now var.</p>
 <p><b>var message = 'Hello World';</p>
 <p>console.log(message);</b></p>
 <h2>IntelliSense</h2>
 <p>In VS Code, you can see that you get language features such as syntax highlighting and bracket matching. When you were typing in the editor, you may have noticed IntelliSense, the smart code completions and suggestions provided by VS Code and the TypeScript language server. Below you can see the methods of <b>console</b></p>
-<img src="exp3.png" alt="console">
+          <img src="exp3.png" alt="console" style="width: 50%; max-width: 500px; height: auto;">
 <p>When you select a method, you then get parameter help and can always get hover information.</p>
-<img src="exp4.png" alt="console">
+          <img src="exp4.png" alt="console" style="width: 50%; max-width: 500px; height: auto;">
 <h2>tsconfig.json</h2>
 <p>So far in this tutorial, you have been relying on the TypeScript compiler's default behavior to compile your TypeScript source code. You can modify the TypeScript compiler options by adding a <b>tsconfig.json</b> file that defines the TypeScript project settings such as the compiler options and the files that should be included.</p>
 <p><b>Important:</b> To use <b>tsconfig.json</b> for the rest of this tutorial, invoke <b>tsc</b> without input files. The TypeScript compiler knows to look at your <b>tsconfig.json</b> for project settings and compiler options.</p>
@@ -268,7 +268,7 @@ TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. 
 <p>}</p>
 <p>}</b></p>
 <p>When editing <b>tsconfig.json</b>, IntelliSense (<b>Ctrl+Space</b>) will help you along the way.</p>
-<img src="img.png" alt="img">
+          <img src="exp5.png" alt="console" style="width: 50%; max-width: 500px; height: auto;">
 <p>By default, TypeScript includes all the <b>.ts</b> files in the current folder and subfolders if the files attribute isn't included, so we don't need to list <b>helloworld.ts</b> explicitly.</p>
 </section>
 
